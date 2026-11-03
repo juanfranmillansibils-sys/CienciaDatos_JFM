@@ -1,8 +1,11 @@
 # =============================================================================
-# Máximo diario de la media móvil de 8 horas — Ozono, Montevideo (ene-abr 2024)
+# Clase 7 — Máximo diario de la media móvil de 8 horas
+# Ozono, Montevideo (enero-abril de 2024)
 # =============================================================================
-# El script busca el CSV solo, calcula el indicador y guarda el gráfico
-# como PNG en la misma carpeta. No hace falta tocar nada.
+# Lee datos/o3_01_2024_04_2024.csv, calcula el indicador de la guía OMS 2021
+# y guarda el gráfico en graficos/clase07_ozono_max_8h.png.
+#
+# Datos: se bajan con datos/obtener_datos.py (ver datos/fuentes.md).
 # =============================================================================
 
 from pathlib import Path
@@ -10,35 +13,27 @@ from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
 
-NOMBRE_CSV = "o3_01_2024_04_2024.csv"
 
-
-def buscar_csv(nombre):
-    """Busca el CSV en las carpetas habituales y devuelve su ruta."""
+def raiz_proyecto():
+    """Sube carpetas hasta encontrar la raíz del repositorio (la que tiene .git)."""
     try:
-        aqui = Path(__file__).parent.resolve()
-    except NameError:
-        aqui = Path.cwd().resolve()
-
-    candidatos = [
-        aqui / nombre,
-        Path.cwd() / nombre,
-        aqui / "clases" / "clase7" / nombre,
-        Path.home() / "Downloads" / nombre,
-        Path.home() / "Descargas" / nombre,
-    ]
-    for ruta in candidatos:
-        if ruta.exists():
-            return ruta
-
-    encontrados = list(Path.home().rglob(nombre))
-    if encontrados:
-        return encontrados[0]
-    raise FileNotFoundError(f"No encontré {nombre}.")
+        actual = Path(__file__).resolve().parent
+    except NameError:  # al correr celdas sueltas en VS Code
+        actual = Path.cwd().resolve()
+    for carpeta in [actual, *actual.parents]:
+        if (carpeta / ".git").exists() or (carpeta / "datos" / "fuentes.md").exists():
+            return carpeta
+    raise FileNotFoundError("No encontré la raíz del repositorio CienciaDatos_JFM.")
 
 
-RUTA_CSV = buscar_csv(NOMBRE_CSV)
-SALIDA = RUTA_CSV.parent / "ozono_max_8h.png"
+RAIZ = raiz_proyecto()
+RUTA_CSV = RAIZ / "datos" / "o3_01_2024_04_2024.csv"
+SALIDA = RAIZ / "graficos" / "clase07_ozono_max_8h.png"
+
+if not RUTA_CSV.exists():
+    raise FileNotFoundError(
+        f"No se encontró {RUTA_CSV}. Correr primero datos/obtener_datos.py"
+    )
 
 # -----------------------------------------------------------------------------
 # 1. Carga
