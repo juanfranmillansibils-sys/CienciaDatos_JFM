@@ -1,0 +1,24 @@
+# Datos: se versiona el código que los obtiene (datos/obtener_datos.py), no los datos
+*.csv
+*.xlsx
+*.parquet
+datos/*.jpg
+datos/*.png
+clases/clase03/datos/
+
+# Claves y credenciales: nunca se suben
+clave_*.txt
+*.key
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+
+# Editor y sistema
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
