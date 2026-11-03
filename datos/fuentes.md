@@ -9,18 +9,20 @@ Para tenerlos en la computadora, desde la raíz del repositorio:
 python datos/obtener_datos.py
 ```
 
-Los conteos de filas se verificaron el 03/11/2026 sobre los archivos que usé en
-clase. El script vuelve a contar al bajar y avisa si algo cambió.
+La fecha de obtención es el día en que bajé cada archivo (la fecha que muestra
+el Explorador de Windows). Los conteos de filas se verificaron el 03/11/2026
+sobre esos mismos archivos. El script vuelve a contar al bajar y avisa si algo
+cambió.
 
-| Archivo | Clase | Publica | Licencia | Filas | Período |
-|---|---|---|---|---|---|
-| `empresasdei_20230330.csv` | 5 | Ministerio de Industria, Energía y Minería | Datos abiertos de Uruguay | 1.422 | corte del 30/03/2023 |
-| `o3_01_2024_04_2024.csv` | 7 | Intendencia de Montevideo | Datos abiertos de Uruguay | 291.926 | 01/01/2024 a 29/04/2024 |
-| `no2_05_2024_08_2024.csv` | 10 | Intendencia de Montevideo | Datos abiertos de Uruguay | 347.952 | 01/05/2024 a 30/08/2024 |
-| `pm_2_5_05_2024_08_2024.csv` | 10 | Intendencia de Montevideo | Datos abiertos de Uruguay | 433.338 | 01/05/2024 a 30/08/2024 |
-| `autoscope_06_2024_volumen.csv` | 10 | Intendencia de Montevideo, Centro de Gestión de Movilidad | Datos abiertos de Uruguay | 3.688.891 | junio de 2024 |
-| `transito_aire_junio2024.csv` | 12 | Repositorio del curso (tabla preparada por la cátedra) | la de los datos de origen | 2.160 | junio de 2024 |
-| `ticket.jpg` | 11 | Repositorio del curso | — | — | — |
+| Archivo | Clase | Publica | Licencia | Filas | Período | Obtenido |
+|---|---|---|---|---|---|---|
+| `empresasdei_20230330.csv` | 5 | Ministerio de Industria, Energía y Minería | Datos abiertos de Uruguay | 1.422 | corte del 30/03/2023 | 03/09/2026 |
+| `o3_01_2024_04_2024.csv` | 7 | Intendencia de Montevideo | Datos abiertos de Uruguay | 291.926 | 01/01/2024 a 29/04/2024 | 10/09/2026 |
+| `no2_05_2024_08_2024.csv` | 10 | Intendencia de Montevideo | Datos abiertos de Uruguay | 347.952 | 01/05/2024 a 30/08/2024 | 22/09/2026 |
+| `pm_2_5_05_2024_08_2024.csv` | 10 | Intendencia de Montevideo | Datos abiertos de Uruguay | 433.338 | 01/05/2024 a 30/08/2024 | 22/09/2026 |
+| `autoscope_06_2024_volumen.csv` | 10 | Intendencia de Montevideo, Centro de Gestión de Movilidad | Datos abiertos de Uruguay | 3.688.891 | junio de 2024 | 22/09/2026 |
+| `transito_aire_junio2024.csv` | 12 | Repositorio del curso (tabla preparada por la cátedra) | la de los datos de origen | 2.160 | junio de 2024 | con `obtener_datos.py` |
+| `ticket.jpg` | 11 | Repositorio del curso | — | — | — | con `obtener_datos.py` |
 
 ## Detalle por fuente
 
