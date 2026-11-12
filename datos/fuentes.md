@@ -21,7 +21,6 @@ cambió.
 | `no2_05_2024_08_2024.csv` | 10 | Intendencia de Montevideo | Datos abiertos de Uruguay | 347.952 | 01/05/2024 a 30/08/2024 | 22/09/2026 |
 | `pm_2_5_05_2024_08_2024.csv` | 10 | Intendencia de Montevideo | Datos abiertos de Uruguay | 433.338 | 01/05/2024 a 30/08/2024 | 22/09/2026 |
 | `autoscope_06_2024_volumen.csv` | 10 | Intendencia de Montevideo, Centro de Gestión de Movilidad | Datos abiertos de Uruguay | 3.688.891 | junio de 2024 | 22/09/2026 |
-| `transito_aire_junio2024.csv` | 12 | Repositorio del curso (tabla preparada por la cátedra) | la de los datos de origen | 2.160 | junio de 2024 | con `obtener_datos.py` |
 | `ticket.jpg` | 11 | Repositorio del curso | — | — | — | con `obtener_datos.py` |
 
 ## Detalle por fuente
@@ -71,7 +70,3 @@ cambió.
 - La foto del ticket que se usó en la clase 11, del mismo repositorio
   (`clases/clase11/clase_ia/ticket.jpg`). No tiene datos personales.
 
-## Licencia
-
-Las fuentes de gub.uy se publican bajo la Licencia de Datos Abiertos de
-Uruguay (AGESIC), que permite usarlos y redistribuirlos citando la fuente.
