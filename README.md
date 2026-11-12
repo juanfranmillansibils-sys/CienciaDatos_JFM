@@ -11,9 +11,6 @@ CienciaDatos_JFM/
 ├── clases/      un script por actividad, en una carpeta por clase
 ├── datos/       script que baja los datos y ficha de fuentes (los datos no se suben)
 ├── diario/      una entrada por semana: qué intenté, qué falló, qué decidí
-├── errores/     errores cometidos, cómo se detectaron y cómo se arreglaron
-├── funciones/   utilidades propias, con casos de prueba
-├── recetas/     procedimientos resueltos, para reusar
 └── graficos/    gráficos que generan los scripts
 ```
 
@@ -27,7 +24,4 @@ CienciaDatos_JFM/
 | 7 | Carga y transformación del ozono | [`clase07_carga_y_transformacion_ozono.py`](clases/clase07/clase07_carga_y_transformacion_ozono.py) | `o3_01_2024_04_2024.csv` |
 | 7 | Máximo diario de la media móvil de 8 horas (guía OMS) | [`clase07_ozono_max_8h.py`](clases/clase07/clase07_ozono_max_8h.py) | `o3_01_2024_04_2024.csv` |
 | 10 | ¿El tránsito ensucia el aire? Tres Cruces, junio de 2024 | [`clase10_transito_aire.py`](clases/clase10/clase10_transito_aire.py) | conteo vehicular, NO2 y PM2.5 |
-| 11 | Leer un ticket con IA (Gemini) | [`clase11_leer_ticket.py`](clases/clase11/clase11_leer_ticket.py) | `ticket.jpg` y clave propia |
-| 12 | Tránsito y aire: faltantes, franjas y modelos (7 ejercicios) | [`clase12_ejercicios_transito_aire.py`](clases/clase12/clase12_ejercicios_transito_aire.py) | `transito_aire_junio2024.csv` |
-| 14 | Unir tablas (ejercicios 58 a 61, en papel) | [`clase14_unir_tablas.md`](clases/clase14/clase14_unir_tablas.md) y [`.py`](clases/clase14/clase14_unir_tablas.py) | — |
-
+| 11 | Leer un ticket con IA (Gemini) | [`clase11_leer_ticket.py`](clases/clase11/clase11_leer_ticket.py) | `ticket.jpg` y clave propia 
