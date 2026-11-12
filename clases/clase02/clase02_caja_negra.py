@@ -1,21 +1,6 @@
 # =============================================================================
 # Clase 2 — Generación de datos: de la caja negra al dataset
 # =============================================================================
-# Material: clases/clase2/generacion de datos.qmd del repositorio del curso.
-#
-# La dinámica: cada estudiante tocó un objeto de la caja sin verlo, durante
-# 15 segundos, y registró textura, rigidez, aristas, peso estimado y certeza.
-# Este script:
-#   1. arma el dataset de la dinámica y declara el tipo de cada variable;
-#   2. lo agranda con los dos métodos de la clase: bootstrap (N = 100) y
-#      sintético paramétrico con una normal (N = 500);
-#   3. compara lo que conserva y lo que inventa cada método.
-#
-# Guarda el gráfico en graficos/clase02_caja_negra_sinteticos.png.
-# No necesita archivos de datos: los datos están escritos en el script.
-# =============================================================================
-
-#%%
 from pathlib import Path
 
 import numpy as np
