@@ -31,4 +31,3 @@ CienciaDatos_JFM/
 | 12 | Tránsito y aire: faltantes, franjas y modelos (7 ejercicios) | [`clase12_ejercicios_transito_aire.py`](clases/clase12/clase12_ejercicios_transito_aire.py) | `transito_aire_junio2024.csv` |
 | 14 | Unir tablas (ejercicios 58 a 61, en papel) | [`clase14_unir_tablas.md`](clases/clase14/clase14_unir_tablas.md) y [`.py`](clases/clase14/clase14_unir_tablas.py) | — |
 
-![Máximo diario de la media móvil de 8 horas de ozono](graficos/clase07_ozono_max_8h.png)
