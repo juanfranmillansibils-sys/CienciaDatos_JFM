@@ -7,13 +7,6 @@
 # lo que falta.
 #
 # Datos: datos/o3_01_2024_04_2024.csv, se baja con datos/obtener_datos.py.
-#
-# Cómo correrlo:
-#   a) Completo, desde la terminal:
-#        python clases/clase07/clase07_carga_y_transformacion_ozono.py
-#      (se abre una ventana por gráfico; hay que cerrarla para que siga)
-#   b) Por bloques, recomendado: en VS Code cada "# %%" es una celda.
-#      Cursor adentro y Shift+Enter, de arriba hacia abajo.
 # =============================================================================
 
 # %%
