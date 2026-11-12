@@ -3,20 +3,8 @@
 # Del diccionario al archivo y del archivo al DataFrame: qué sobrevive al viaje
 # =============================================================================
 # Resolución de los ocho ejercicios de clases/clase3/ejercicios.py del curso,
-# más el desafío por equipo (nuestro equipo trabaja con datos experimentales).
-#
-# Antes de correrlo no hace falta nada: si no existe clases/clase03/datos/,
-# el script corre generar_archivos.py (el generador de la clase, sin cambios).
-#
-# Las respuestas que la consigna pide "en la bitácora" están escritas como
-# comentarios debajo de cada ejercicio, con los números que da la corrida.
-#
-# Cómo correrlo: `python clases/clase03/clase03_cargar_datos.py`, o por celdas
-# en VS Code. El ejercicio 5 provoca un error a propósito, pero está dentro de
-# un try/except, así que el script sigue.
-# =============================================================================
 
-#%%
+
 import runpy
 from pathlib import Path
 
@@ -72,14 +60,6 @@ print("Tipos declarados:\n", df.dtypes)
 texto_generico = [c for c in df.columns if str(df[c].dtype) in ("str", "object")]
 assert texto_generico == [], f"quedaron como texto: {texto_generico}"
 print("¿El orden funciona?", (df["rigidez"] > "blando").sum(), "objetos más rígidos que blando")
-
-# Respuesta (bitácora). En num_aristas, una esfera tiene 0 aristas: ese cero es
-# una medición válida, porque la pregunta "¿cuántas aristas tiene?" tiene
-# respuesta y es cero. Distinto sería que el observador no haya podido
-# contarlas: ahí no hay medición, y anotar 0 mezcla "no tiene" con "no sé".
-# Ese caso tendría que ir como faltante (NaN), y el diccionario de variables
-# tendría que decir cómo se registra.
-
 
 # =============================================================================
 # EJERCICIO 2. LAS RESTRICCIONES DEL DGP, ESCRITAS COMO CÓDIGO
@@ -156,11 +136,6 @@ diccionario = pd.DataFrame([
 diccionario.to_csv(CARPETA / "diccionario_variables.csv", index=False, encoding="utf-8")
 print(diccionario.to_string(index=False))
 
-# Respuesta (bitácora). La columna "faltante" habría evitado el problema del 0
-# en num_aristas: obliga a decir de antemano cómo se anota "no se pudo contar",
-# y así el 0 queda reservado para "no tiene aristas". También ayuda
-# "rango_valido", que dice qué significa el 0.
-
 
 # =============================================================================
 # EJERCICIO 4. EL VIAJE DE IDA Y VUELTA: QUÉ SE PIERDE AL GUARDAR
@@ -204,11 +179,7 @@ try:
           "| ordenada:", df_parquet["rigidez"].cat.ordered)
 except ImportError:
     print("\nPara parquet hace falta instalar pyarrow: pip install pyarrow")
-# Parquet guarda el tipo de cada columna junto con los datos: textura y
-# rigidez vuelven como categóricas, y rigidez conserva el orden, sin declarar
-# nada. Pero no es perfecto: certeza_observador (categórica ordenada con
-# categorías numéricas 1 a 5) volvió como int64 en mi prueba (pandas 3.0 y
-# pyarrow 26). Igual hay que verificar los tipos después de leer.
+
 
 
 # =============================================================================
@@ -349,19 +320,6 @@ print(vecino.dtypes)
 print(vecino.describe())
 print("Sucursales:", list(vecino["sucursal"].cat.categories))
 assert vecino["monto_uyu"].min() > 100, "algún monto quedó dividido por mil"
-
-# Respuesta (bitácora). Tres afirmaciones sobre el proceso que generó el
-# archivo:
-#  1. Es un registro transaccional con una fila por operación: el ID no se
-#     repite y hay una operación por día, del 02/03 al 10/04 de 2026.
-#  2. Se escribió con convenciones uruguayas (fecha dd/mm/aaaa, punto de
-#     miles) y probablemente a mano o desde una planilla: los espacios
-#     sobrantes en "Centro " y " Carrasco" no los pone un sistema.
-#  3. Los montos están en pesos uruguayos y son enteros: se redondearon antes
-#     de exportar, o el sistema no registra centésimos.
-# Pregunta para el equipo que lo produjo: ¿una sola operación por día es real,
-# o el archivo es un resumen diario de varias operaciones?
-
 
 # =============================================================================
 # DESAFÍO POR EQUIPO — Datos experimentales
