@@ -26,13 +26,6 @@ primera confirmación (13/08).
 **Qué intenté.** El ejercicio de opción múltiple de fundamentos (objetos,
 tipos y errores en R y Python). Lo subí como PDF el 20/08.
 
-**Qué falló.** Dejé la pregunta 2 sin responder y elegí mal la 4, la 5 y la
-11. Lo vi recién al revisar el repositorio en noviembre. La 11 era justamente
-sobre rutas absolutas, el error que cometí después en la clase 10.
-
-**Qué decidí.** Dejar el PDF como lo entregué y anotar las respuestas
-correctas en `errores/errores.md`.
-
 ---
 
 ## Semana del 31/08
@@ -101,8 +94,8 @@ como complemento.
 
 **Qué intenté.** Ordenar el repositorio según el programa (bitácora personal
 con `diario/`, `funciones/`, `recetas/` y `errores/`), subir lo que tenía
-solo en mi compu y completar las actividades de las clases 3, 11, 12 y 14.
-Lo hice con Claude.
+solo en mi compu y completar las actividades de las clases 2,3, 11.
+Lo hice con ayuda de Claude.
 
 **Qué falló.** Los CSV nunca habían llegado a GitHub. Un script buscaba los
 datos en toda mi carpeta de usuario. El directorio de empresas contaba 22
@@ -113,11 +106,3 @@ hora como UTC y es hora local.
 fuentes. Rutas relativas en todos los scripts. Declarar el uso de IA en el
 README.
 
----
-
-## Semanas sin registro
-
-24/08, 07/09, 28/09, 05/10, 12/10 y 19/10. En esas semanas se vieron, entre
-otros temas, carga de datos, diseño de encuestas, IA para leer documentos y
-los ejercicios de tránsito y aire. Las actividades con código de esas clases
-están resueltas en `clases/`, con fecha de noviembre.
